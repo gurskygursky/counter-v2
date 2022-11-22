@@ -1,0 +1,62 @@
+.counterWrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-color: white;
+    border-style: solid;
+    border-radius: 7px;
+    border-width: 1px;
+    width: 300px;
+    height: 150px;
+    background-color: #27323f;
+
+}
+
+.counterValue {
+    width: 192px;
+    height: 64px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    margin: 5px 0 5px 0;
+    background-color: #6681ad;
+    color: black;
+    font-size: x-large;
+}
+
+.buttonWrapper {
+    width: 192px;
+    height: 64px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    margin: 5px 0 5px 0;
+    background-color: #6681ad;
+    color: black;
+}
+
+.button {
+    width: 64px;
+    height: 32px;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    margin: 0 0 0 5px;
+    background-color: #6681ad;
+    color: black;
+    font-size: medium;
+}
