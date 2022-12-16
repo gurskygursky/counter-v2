@@ -15,8 +15,13 @@ export const App: React.FC = () => {
             {/*<h3>Simple Counter</h3>*/}
             {/*<SimpleCounter/>*/}
             <h3>Counter With Settings</h3>
-            <Counter counterValue={counterValue} setCounterValue={setCounterValue}/>
-            <CounterSettings setCounterValue={setCounterValue}
+            <Counter counterValue={counterValue}
+                     setCounterValue={setCounterValue}
+                     minValue={minValue}
+                     maxValue={maxValue}
+            />
+            <CounterSettings counterValue={counterValue}
+                             setCounterValue={setCounterValue}
                              minValue={minValue}
                              setMinValue={setMinValue}
                              maxValue={maxValue}

@@ -59,3 +59,19 @@
     color: black;
     font-size: medium;
 }
+.disabled {
+    width: 64px;
+    height: 32px;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    margin: 0 0 0 5px;
+    background-color: #6681ad;
+    color: white;
+    font-size: medium;
+}
+.error {
+    border-color: crimson;
+    color: crimson;
+}
