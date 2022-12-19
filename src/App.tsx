@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import {Counter} from './counter/Counter';
 import {SimpleCounter} from './simple-counter/SimpleCounter';
@@ -9,6 +9,30 @@ export const App: React.FC = () => {
     const [counterValue, setCounterValue] = useState<number>(0);
     const [minValue, setMinValue] = useState<number>(0);
     const [maxValue, setMaxValue] = useState<number>(0);
+
+    useEffect(() => {
+        const localStorageAsString = localStorage.getItem('minValue');
+        if (localStorageAsString) {
+            const localStorageAsNumber = JSON.parse(localStorageAsString);
+            setMinValue(localStorageAsNumber)
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('minValue', JSON.stringify(minValue));
+    }, [minValue]);
+
+    useEffect(() => {
+        const localStorageAsString = localStorage.getItem('maxValue');
+        if (localStorageAsString) {
+            const localStorageAsNumber = JSON.parse(localStorageAsString);
+            setMaxValue(localStorageAsNumber)
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('maxValue', JSON.stringify(maxValue));
+    }, [maxValue]);
 
     return (
         <div className="App">
